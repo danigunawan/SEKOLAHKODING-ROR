@@ -1,0 +1,105 @@
+# belajar pengulangan
+metode 1 :
+syntax :
+
+while 
+
+end
+
+#selama kondisi terpenuhi maka melakukan sesuatu
+
+
+metode 2 :
+
+until
+
+
+end
+
+#sampai kondisinya salah maka akan melakukan sesuatu pada kode until dan end ini
+
+
+metode 3 : 
+
+for in
+
+end
+
+# angka 
+
+
+################ WHILE ##############
+Example 1:
+1. Buka irb
+
+i = 1
+while i < 5
+  puts "#{i}"
+end
+
+jika kita print kondisi ini maka akan terus (infinitife loop) tidak berhenti karena kondisi terpenuhi i < 5 . i akan 1 terus kondisi akan terus berjalan
+
+Solusi bagaimana kita berhentikan i :
+
+i = 1
+while i < 5
+  puts "#{i}"
+  i = i + 1 # jadi ketika sampai i+1 = 5, maka akan berhenti
+end
+
+
+output : 
+1
+2
+3
+4
+
+
+############ UNTIL ##############
+Example 2:
+
+i = 5
+
+until i <= 0 # jelas salah karena 5 tidak lebih kecil dari 0 maka true akan jalan until ini
+  puts "nilai i: #{i}"
+  i -= 1 # kita kasih anchor agar berhenti, jadi setiap menjalankan program akan dikurangin 1
+end
+
+output :
+
+5
+4
+3
+2
+1
+
+
+################### FOR IN ####################
+example 3 : 
+for angka in (0..3) # (0..3) bukan batas tapi ngeprint dari 0 - 3 pada contoh
+  
+ puts "nilai angka: #{angka}"
+
+end
+
+output : 
+nilai angka 0
+nilai angka 1
+nilai angka 2
+nilai angka 3
+
+
+Example 4 for in dengan array ;
+
+bahasa = ["html","css","js"]
+
+for b in bahasa
+  
+ puts "nilai bahasa: #{b}"
+
+end
+
+output : 
+nilai bahasa html
+nilai bahasa css
+nilai bahasa js

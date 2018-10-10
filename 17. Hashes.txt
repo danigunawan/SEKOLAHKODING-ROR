@@ -1,0 +1,85 @@
+# hashes
+
+kita sudah belajar array untuk mengakses index / nilai dari array
+
+misal :
+
+# array bahasa[2]
+
+jadi sekarang ada lagi metode array tempat menyimpan beberapa data dalam satu kontainer namanya hash/hashes/hashmap/dictionary
+
+tapi  dia tidak otomatis punya nomor index.
+
+
+example 1 :
+
+#pada array biasa kita bisa menuliskan seperti ini :
+
+bahasa = ["html","css","js"] 
+
+#namun : pada hash kita nentuin sendiri nomor kunci atau hashnya tidak cuman string tapi angka
+contoh penulisan lain :
+
+bahasa = {
+     "satu" => "html", 
+     "dua" => "css",
+     "tiga" => "js",
+}
+
+puts bahasa
+end
+
+output :
+
+{"satu" => "html", "dua" => "css","tiga" => "js"}
+
+
+#ket : sebelah kiri kunci/indexnya sebelah kanan nilainya
+
+
+example 2 :
+MENGAKSES / PRINT INDEX KEYNYA SAJA PADA ARRAY HASH
+==========================
+
+bahasa = {
+     "satu" => "html", 
+     "dua" => "css",
+     "tiga" => "js",
+}
+
+puts "bahasa : #{bahasa['satu']}" # mengambil key/index satu dan print
+
+output :
+
+bahasa : html
+
+end
+#ket : sebelah kiri kunci/indexnya sebelah kanan nilainya
+
+
+example 3 :
+LANGSUNG PRINT SEMUA ARRAY HASHNYA dengan each do
+======================
+
+
+bahasa = {
+     "satu" => "html", 
+     "dua" => "css",
+     "tiga" => "js",
+}
+
+bahasa.each do | kiri, value | # kiri itu key/index array hash,v value itu kanan dari hash 
+
+puts "Kuncinnya: #{kiri} dan nilainya #{value}"
+
+end
+
+output :
+
+kuncinya: satu dan nilainya html
+kuncinya: dua dan nilainya css
+kuncinya: tiga dan nilainya js
+
+#ket : sebelah kiri kunci/indexnya sebelah kanan nilainya
+
+

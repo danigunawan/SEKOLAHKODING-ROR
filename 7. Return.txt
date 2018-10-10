@@ -1,0 +1,43 @@
+#belajar return
+ketika kita mengambil suatu fungsi setelah melakukan sesuatu kita akan mengembalikan nilai
+
+1. buka irb
+
+#example 1
+
+def jumlah(num1, num2)
+  num = num1 + num2
+  return num # cuman mengembalikan nilai
+end
+
+puts jumlah(10,20)
+
+
+
+#example 2
+
+def jumlah(num1, num2)
+  num = num1 + num2
+  return num # cuman mengembalikan nilai nilainya bebas mau kita apakan nanti saat kita instantiasi object atau akses object()
+end
+
+hasil = jumlah(10,20)
+puts hasil - 30 
+
+output : 0
+
+
+
+#example 3
+
+def jumlah(num1, num2)
+  num = num1 + num2
+  puts "sedang menjumlahkan"
+  return num1 # cuman mengembalikan nilai nilainya bebas mau kita apakan nanti saat kita instantiasi object atau akses object()
+end
+
+puts jumlah(10,20)
+
+output : 10
+
+	

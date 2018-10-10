@@ -1,0 +1,51 @@
+# belajar fungsi
+# belajar parameter
+
+########################
+1. buka irb
+
+### Example 1 - statis
+def sebutkan()
+  angka = 5
+  puts "tuk.. tuk.. tuk.."
+  puts "tuk.. tuk.. tuk.. #{angka}"
+end
+
+sebutkan()
+
+
+### Example 2 - dinamis dengan parameter
+def sebutkan(num)
+  angka = num
+  puts "tuk.. tuk.. tuk.."
+  puts "tuk.. tuk.. tuk.. #{angka}"
+end
+
+sebutkan(1) # ini akan mengeset object pada method
+
+
+### Example 3 - dinamis dengan parameter, agar code tidak boros
+def sebutkan(num)
+  puts "tuk.. tuk.. tuk.."
+  puts "tuk.. tuk.. tuk.. #{num}"
+end
+
+sebutkan(1) # ini akan mengeset object pada method
+
+
+### Example 3 - dinamis dengan 2 parameter
+def tambahkan(num1, num2)
+  num = num1 + num2
+  puts "angkanya #{num}"
+end
+
+tambahkan(100, 200) # ini akan mengeset object pada method
+
+
+### Example 4 - dinamis dengan 2 parameter
+def kurangkan(num1, num2)
+  num = num1 + num2
+  puts "angkanya #{num}"
+end
+
+kurangkan(100, 200) # ini akan mengeset object pada method

@@ -1,0 +1,214 @@
+# OOP- Tingkat Akses Public, protected, private
+tingkat akses adalah kita menentukan siapa aja dan darimana aja metode/def kita dipanggil.
+
+misal jam dia fungsinya sebagai informasi waktu tapi dijam terdapat komponen yang ribet seperti gear batre dan lain lain 
+intinya sesuatu yang repot dan ribet gausah diperlihatkan jadi kita hanya memperlihatkan display/informasi waktu saja
+
+jadi tingkat akses ini kita bisa nentukan yang mana yang mau kita lihatkan, dan mana yang boleh pake yang kita pakai,dan yang mana yang kita ga bolehkan
+jadi diprivasikan.
+########################## TINGKAT AKSES PUBLIC ###############
+example 1:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+orang = Orang.new(20)
+orang.ambilUmur
+
+
+
+########################## TINGKAT AKSES PRIVATE ###############
+example 1:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+  
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+  private :ambilUmur
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+orang = Orang.new(20)
+orang.ambilUmur
+
+# penjelasan kode diatas :
+
+# penempatan private biasa akan membuat seluruh method/metode dibawahnya ikut menjadi private
+# jika kita ingin menentukan 1 method/def/metode tertentu saja agar metode yg lain tidak ikut private 
+kita tulis privatenya dibawah dari method/metode/def yang kita buat misalkan : 
+
+saya ingin method ambilUmur :
+
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+  private :ambilUmur # disini peletakannya dan diikuti dengan nama metodenya
+  
+
+
+# jika ingin private 2 metode ambilUmur dan setUmur, pakai koma dan diletakan dimetode paling belakang yakni setUmur
+  
+
+ def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+  
+  def setUmur(y)
+  @umur = y
+  end
+  private :ambilUmur, :setUmur
+
+
+# jika kode diatas dirun maka error karena tidak bisa diakses secara public begini :
+
+orang = Orang.new(20)
+orang.ambilUmur
+
+
+
+SOLUSINYA tambahkan metode lain yang public untuk mengakses metode private tadi yang ambilUmur :
+
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+  
+  def ambil
+    ambilUmur # membuat method ambil secara public untuk mengakses method private dari ambilUmur 
+  end
+  
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+  private :ambilUmur
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+orang = Orang.new(20)
+orang.ambil # ini memanggil method ambil yang public berisi, pemanggilan method ambilUmur tadi yang private
+
+
+output :
+
+umurnya... 20
+
+
+
+
+########################## TINGKAT AKSES PROTECTED ###############
+# protected ini adalah fungsinya/metode/def hanya bisa dipanggil dari class itu sendiri (parentnya) atau subclass(child classnya)
+
+## Example 1 - Error 
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+  
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+  protected :ambilUmur
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+orang = Orang.new(20)
+orang.ambilUmur # ini memanggil method ambilUmur yang protected berisi pemanggilan method ambilUmur tadi yang protected
+
+
+output :
+
+Error
+
+## Example  1 - Solution
+# Solusinya cara memanggil class protected buat class baru contoh :
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+  
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+  protected :ambilUmur
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+# buat class child Bapak dan extends/warisan dari class Orang
+
+class Bapak < Orang # tanda kutif adalah inheritance adalah pewarisan dari class parent "<" Orang
+ 
+ def ambil
+  ambilUmur
+ end
+ 
+end
+
+
+orang = Bapak.new(20)
+orang.ambil # ini memanggil method ambil dengan akses public berisi memanggil method dari class parents dengan akses protected dari class child Bapak, class Bapak ini yang diwariskan oleh class parents Orang, yang protected berisi pemanggilan method ambilUmur tadi yang protected
+
+output : 
+umurnya ... 20
+
+# contoh kasus lain :
+jadi jika kita memanggil method ambilUmur dari class Bapak masih tetap error :
+
+orang = Bapak.new(20)
+orang.ambilUmur #memanggil object dan method ambilUmur yang protected dari class Orang secara langsung akan error
+
+#karna dia cuman bisa dipanggil oleh fungsi yang berada didalam kelas yang udah diwarisin

@@ -1,0 +1,68 @@
+# belajar pengulangan part 2
+
+kita sudah punya dasar loop sebelumnya pada video
+
+
+# MENGELUARKAN NILAI ARRAY DENGAN EACH DO
+sekarang dengan metode :
+- each do
+
+
+# example 1 :
+
+bahasa = ["html","css","js"]
+
+
+# CARA 1
+bahasa.each do |b|            # |b| ini adalah pipa 
+  puts "nilai bahasa: #{b}"
+
+end
+
+
+output :
+
+nilai bahasa html
+nilai bahasa css
+nilai bahasa js
+
+
+puts "_______________"
+
+
+# example 2
+# CARA 2
+
+bahasa = ["html","css","js"]
+
+bahasa.each { |b| puts "disini juga #{b}" }
+
+
+output :
+
+nilai bahasa html
+nilai bahasa css
+nilai bahasa js
+
+
+# dari cara 1 dan 2 hasilnya sama aja ini perbedaan cara penulisan saja 
+
+
+
+# example 3
+
+(0..3).each do |a|
+
+puts "nilai si a #{a}"
+
+
+output :
+
+nilai a 0
+nilai a 1
+nilai a 2
+nilai a 3
+
+KET : sama saja dengan loop pakai for in cuman beda dari penulisannya saja
+
+

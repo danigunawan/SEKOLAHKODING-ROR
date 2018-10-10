@@ -1,0 +1,36 @@
+# buat program kecil
+========================
+1. irb
+
+example 1 : 
+
+puts "bayar utang, utang lo 2000: "
+angka = gets.chomp.to_i # to_i konversi text jadi angka
+
+if angka < 2000
+puts "dikit banget bos"
+elseif angka == 2000
+puts "pas banget, tapi lunas"
+else
+puts "wah tajir nih"
+end
+
+
+
+example 2 : 
+
+utang = 2000
+puts "bayar utang, utang lo 2000: "
+angka = gets.chomp.to_i # to_i konversi text jadi angka
+
+if angka < 2000
+puts "dikit banget bos"
+elseif angka == 2000
+puts "pas banget, tapi lunas"
+utang= 0
+else
+puts "wah tajir nih"
+utang= 0
+end
+
+puts "utang ente sekarang #{utang}"

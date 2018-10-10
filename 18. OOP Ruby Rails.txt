@@ -1,0 +1,197 @@
+# OOP ini adalah pada bahasa ruby ini menganggap semua hal didalamnya sebagai object :
+REFF :
+
+Variable local dan instance : https://stackoverflow.com/questions/3757481/rails-local-variables-versus-instance-variables
+## REFF : http://nyan.catcyb.org/ruby_basic/sesi-2-oop.html
+
+variable # ini local variable dari controller
+@variable # ini instance variable dari controller
+
+https://stackoverflow.com/questions/14319347/variables-in-ruby-on-rails
+http://strugglingwithruby.blogspot.co.id/2010/03/variables.html
+
+===================================================================
+
+ada :
+fungsi
+ada variabel
+class
+
+contoh didalam komputer ada :
+- ram
+- hardisk
+- kipas
+
+anggap aja object adalah bagian dari komputer ini.
+
+
+semua kita bungkus dalam class, kita anggap aja class ini kontainer/tempat nyimpan banyak baris kode
+keuntungan class : jadi kita sudah punya fungsi tertentu 
+jadi kita ingin membuat class lain kita tinggal manggil class ini/ kita buat object jadi kita tidak perlu buat berulangulang dan memboroskan
+kode
+
+OOP
+#####################
+example 1:
+
+class Orang
+
+  def ambilUmur
+  puts "umurnya..."
+  end
+
+end
+
+#bikin object dari class
+orang = Orang.new # ini membuat object dan instantiasi objectnya
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+
+OOP VARIABLE PADA ROR
+#####################
+example 2:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  def initialize
+   puts "masuk ke initialize"
+  end 
+
+  def ambilUmur
+  puts "umurnya..."
+  end
+
+end
+
+#bikin object dari class
+orang = Orang.new # ini membuat object dan instantiasi objectnya
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+
+CATATAN :
+
+# variabel atau local variable dia hanya bisa diakses didalam block scopenya saja atau methodnya sendiri/def dan 
+dia tidak bisa diakses disemua method dalam klass
+
+# @variabel atau variabel instance dia bisa diakses disemua method yanga da dalam class.
+
+==========================
+CONTOH INSTANCE @VARIABEL :
+
+class Customer
+  def initialize(id, name, addr)
+    @cust_id = id
+    @cust_name = name
+    @cust_addr = addr
+  end
+
+  def display_details
+    puts "Customer id #{@cust_id}"
+    puts "Customer name #{@cust_name}"
+    puts "Customer address #{@cust_addr}"
+  end
+end
+
+OOP VARIABLE statis PADA ROR 
+#####################
+example 3:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable (instance), jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize
+   @umur = 29
+  end
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+end
+
+#bikin object dari class
+orang = Orang.new # ini membuat object dan instantiasi objectnya
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+output : umurnya 29
+
+
+
+
+CATATAN :
+
+# variabel atau local variable dia hanya bisa diakses didalam block scopenya saja atau methodnya sendiri/def dan 
+dia tidak bisa diakses disemua method dalam klass
+
+# @variabel atau variabel instance dia bisa diakses disemua method yanga da dalam class.
+
+==========================
+CONTOH INSTANCE @VARIABEL :
+
+class Customer
+  def initialize(id, name, addr)
+    @cust_id = id
+    @cust_name = name
+    @cust_addr = addr
+  end
+
+  def display_details
+    puts "Customer id #{@cust_id}"
+    puts "Customer name #{@cust_name}"
+    puts "Customer address #{@cust_addr}"
+  end
+end
+
+OOP VARIABLE DINAMIS PADA ROR 
+#####################
+example 3:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+end
+
+#bikin object dari class
+orang = Orang.new(21) # ini membuat object dan instantiasi objectnya
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+
+orang = Orang.new(42) # ini membuat object dan instantiasi objectnya
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+
+
+CATATAN :
+
+# variabel atau local variable dia hanya bisa diakses didalam block scopenya saja atau methodnya sendiri/def dan 
+dia tidak bisa diakses disemua method dalam klass
+
+# @variabel atau variabel instance dia bisa diakses disemua method yanga da dalam class.
+
+==========================
+CONTOH INSTANCE @VARIABEL :
+
+class Customer
+  def initialize(id, name, addr)
+    @cust_id = id
+    @cust_name = name
+    @cust_addr = addr
+  end
+
+  def display_details
+    puts "Customer id #{@cust_id}"
+    puts "Customer name #{@cust_name}"
+    puts "Customer address #{@cust_addr}"
+  end
+end

@@ -1,0 +1,44 @@
+#ini komentar dalam ruby
+# variabel || tipeData -> string, number, array, hash
+
+
+#####
+1.  irb
+
+# Example 1:
+
+a= 20 # jika number tidak pakai kutif
+b= 30 # jika number tidak pakai kutif
+
+puts a + b
+
+
+# Example 2 :
+
+a= 20 # jika number tidak pakai kutif
+b= 30 # jika number tidak pakai kutif
+
+puts "Hasil dari a dan b:  #{a + b}" #untuk menampilkan number dan tulisan hasil menggunakan #{}
+
+
+# Example 3:
+
+a= 20 # jika number tidak pakai kutif
+b= 30 # jika number tidak pakai kutif
+c= "gitu loh"
+
+puts "Hasil dari a dan b:  #{a + b - 5} #{c}" #untuk menampilkan number dan tulisan hasil menggunakan #{}
+
+
+
+
+# Example 4:
+
+a= 20.3 # jika tipe data number koma pakai . "titik"
+b= 30 # jika number tidak pakai kutif
+c= "gitu loh"
+
+puts "Hasil dari a dan b:  #{a + b - 5} #{c}" #untuk menampilkan number dan tulisan hasil menggunakan #{}
+
+
+

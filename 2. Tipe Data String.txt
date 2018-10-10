@@ -1,0 +1,42 @@
+# CARA MEMBUAT FILE RUBY DAN RUN
+===================================
+1. IDE editor install : atom/sublime/notepad++
+2. buat file ruby dengan nama file1.rb dan isi :
+puts "helo !"
+3. jalankan pada terminal
+ruby file1.rb
+
+atau bisa melalui irb/terminal : 
+puts "hallo ini diterminal"
+
+
+# MEMBUAT KOMENTAR RUBY
+
+yaitu dengan cara pakai tanda pagar '#' misal #ini komentar
+
+# Belajar variable, string, number, array, hash
+#ex string
+text = "hallo semuanya" #penulisan string bisa 2 kutif atau 1 tanda kutif 'hallo semuanya'
+puts text # ini untuk print variable
+
+#PRINT tanda kutif CONTOH LAIN
+
+text = 'hallo \'semuanya' # pakai kutif 1 tambahkan backslash
+puts text
+
+output : hallo 'semuanya!
+
+sama saja dengan :
+
+text = "hallo 'semuanya!"
+
+# CONCAT ATAU GABUNG 2 VARIABLE 
+
+text = "hallo semuanya!"
+text2 = ".. apa kabar?"
+puts text + text2 
+
+
+
+
+

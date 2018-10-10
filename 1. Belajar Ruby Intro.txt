@@ -1,0 +1,15 @@
+https://www.ruby-lang.org/en/documentation/
+http://brew.sh
+=====================================================================================
+
+#RUBY INSTALL
+
+@FOR MAC 
+1. install Homebrew
+2. brew install ruby
+
+
+@FOR WINDOWS
+1. Ruby Installer / Alternative All In One Package pakai laragon aja sudah tersedia ruby serta rails nya
+2. buka terminal : irb
+3. puts "Selamat belajar ruby" # ini sintax untuk print/echo

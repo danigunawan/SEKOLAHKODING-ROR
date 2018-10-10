@@ -1,0 +1,32 @@
+Beda nya puts dan print
+============================
+
+## PUTS
+Example 1 :
+
+text = "hallo"
+tuxt = "heyhey"
+
+puts text
+puts tuxt
+
+output :
+hallo
+heyhey
+
+Ket : akan tampil dibaris berbeda
+
+
+## PRINT
+Example 2 :
+
+text = "hallo"
+tuxt = "heyhey"
+
+print text
+print tuxt
+
+output :
+hallo heyhey
+
+Ket : akan tampil disatu baris

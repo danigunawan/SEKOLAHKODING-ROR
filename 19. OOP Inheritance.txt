@@ -1,0 +1,124 @@
+# OOP Inheritance
+
+video sebelumnya sudah belajar oop
+
+dan sekarang kita belajar inheritance
+
+# inheritance (pewarisan)
+jadi misalkan kita mau bikin class baru tapi kita ingin ambil metode dari class tertentu 
+jadi kita tidak perlu tulis ulang tapi kita cukup mewarisi klass utamanya .
+
+
+#example 
+
+OOP INHERITANCE
+#####################
+
+example 1:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+
+# INHERITANCE (CONTOHNYA)
+class Bapak < Orang # < ini adalah extends atau mewariskan/inheritance pada class parents Orang
+
+end
+
+
+
+#bikin object dari class Utama
+orang = Orang.new(20) # ini membuat object dan instantiasi objectnya
+orang.setUmur(21)
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+output : 
+umurnya... 21
+
+
+
+#bikin object dari class child Bapak Parentnya Orang
+orang = Bapak.new(20) # ini membuat object dan instantiasi objectnya
+orang.setUmur(21)
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+output : 
+umurnya... 21
+
+
+
+
+
+#############################
+example 2:
+
+class Orang
+  
+  #init method, jadi ini metode pertama kali/otomatis dipanggil, dia akan jalan ketika kita memakai, memanggil object/metode dari class maka dia akan lari setelah itu ke init dulu
+  #biasanya di initialize kita membuat variable jadi pakai @ untuk variable, jika kita menggunakan variable standar misal umur dia tidak bisa akses variablenya atau local variablenya
+  def initialize(x) # untuk variable dinamis x ini didapat dari object Orang.new(21)
+   @umur = x
+  end
+
+  def ambilUmur
+  puts "umurnya... #{@umur}"
+  end
+
+  def setUmur(y)
+  @umur = y
+  end
+
+end
+
+
+
+# INHERITANCE Membuat metode/def di class child atau /Bapak bukan di class Parents/Orang dan tidak dimiliki class Parentnya Orang juga (CONTOHNYA)
+
+class Bapak < Orang # < ini adalah extends atau mewariskan/inheritance pada class parents Orang
+
+  def sifat
+   
+   puts "punya kumis"
+  
+   end
+end
+
+
+
+
+#bikin object dari class Utama
+orang = Orang.new(20) # ini membuat object dan instantiasi objectnya
+orang.setUmur(21)
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+output : 
+umurnya... 21
+
+
+
+#bikin object dari class child Bapak Parentnya Orang
+orang = Bapak.new(20) # ini membuat object dan instantiasi objectnya
+orang.setUmur(21)
+orang.ambilUmur() # memakai metode dari ambilUmur dari object class Orang
+
+orang.sifat
+
+output : 
+umurnya... 21
+punya kumis

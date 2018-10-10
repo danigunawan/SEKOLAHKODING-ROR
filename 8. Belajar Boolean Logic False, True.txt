@@ -1,0 +1,59 @@
+# logic boolean (operator logika)
+
+
+== sama (apakah nilai sebelah kiri sama dengan nilai kanan)
+###########################################################
+ex 1 number : 
+text = 3 
+3 == text 
+true
+
+ex2 string :
+"saya" == "saya" # true
+
+text = "saya"
+"saya" == text # true
+
+
+!= tidak sama
+######################################################
+ex 1:
+"saya" != "saya" # false
+"saya" != "anda" # true
+
+> lebih besar
+########################################################
+ex 1 :
+
+3 > 5 # false
+
+
+>= lebih besar sama dengan
+########################################################
+ex 1 :
+3 >= 3 #true
+3 >= 4 #true
+3 >= 2 #false
+
+< lebih kecil
+########################################################
+
+<= lebih kecil sama dengan
+########################################################
+
+&& //dan
+#######################################################
+example 1 : 
+1 == 1 && 2 == 2 # true && true hasilnya => true karena kedua hasilnya benar
+
+example 2 : 
+1 == 1 && 2 == 3 # true && false hasilnya => false karena kedua hasilnya tidak benar
+
+
+|| //atau
+######################################################
+ex : 
+1 == 1 || 2 == 2 # hasil true karena kedua nilai benar
+
+ex 2 : 
+1 == 1 || 2 == 3 # hasil true pada logic atau cukup salah satunya benar saja

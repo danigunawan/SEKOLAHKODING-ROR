@@ -1,0 +1,45 @@
+# belajar tipe data array
+
+# example 1 array tipe number:
+
+angka = [1,2,3] # isi dari array bisa angka bisa string bisa boolean/operator logika
+
+puts angka
+
+output : 
+1
+2
+3
+
+# example 2 array tipe string:
+
+bahasa = ["java","html","css"] # isi dari array bisa angka bisa string bisa boolean/operator logika
+
+puts bahasa
+
+output :
+
+java
+html
+css
+
+# example 3 array tipe string:
+
+bahasa = ["java","html","js", "css"] # isi dari array bisa angka bisa string bisa boolean/operator logika
+
+puts "pertama : " + bahasa.first # mengambil data pertama dengan first # hasil java
+puts "terakhir : " + bahasa.last # mengambil data terakhir dengan last # hasil css
+
+# drop
+puts "2 pertama : #{bahasa.take(2)}"  # mengambil data pertama dengan first # ["java","html"]
+
+# jumlah array
+puts "Jumlah Array: #{bahasa.count}"   # mengambil jumlah array#  hasil 4
+puts "Jumlah Array: #{bahasa.length}"  # mengambil jumlah array#  hasil 4
+
+output :
+
+java
+html
+css
+

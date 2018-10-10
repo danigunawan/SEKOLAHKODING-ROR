@@ -1,0 +1,105 @@
+# STATEMENT IF, ELSE, ELSEIF
+1. irb
+
+Ex 1:
+
+if 10 == 10 # true
+   puts "benar"
+end
+
+output  : benar
+
+
+
+Ex 2:
+
+if "saya" != "saya"
+   puts "benar"
+end
+
+output  false : kosong 
+
+
+Ex 3:
+
+if "kamu" != "saya" 
+   puts "benar"
+end
+
+output  false : benar
+
+
+Ex 4:
+
+if 10 == 11
+   puts "benar"
+else 
+   puts "salah"
+end
+
+output : salah # karena data kiri tidak sama dengan data kanan
+
+
+Ex 5:
+
+angka = 10
+
+if angka == 11
+   puts "benar"
+else 
+   puts "salah"
+end
+
+Ex 6:
+
+angka = 10
+
+if angka == 10 && 1 == 1
+   puts "keduanya benar"
+else 
+   puts "salah"
+end
+
+output : keduanya benar!
+
+
+
+Ex 7:
+
+angka = 10
+
+if angka == 10 && 1 == 2
+   puts "keduanya benar"
+else 
+   puts "salah"
+end
+
+output : salah # karena kedua nilai && tidak terpenuhi 
+
+
+Ex 8:
+
+angka = 10
+
+if angka == 10 || 1 == 2
+   puts "keduanya benar"
+else 
+   puts "salah"
+end
+
+output : keduanya benar # karena cukup diambil salah satu nilai statement yang benar tapi jika keduanya tidak ada yg benar maka false
+
+
+Ex 9:
+
+angka = 1
+
+if angka == 10
+   puts "Angkanya 10"
+elseif angka == 100
+   puts "Angkanya 100"
+else 
+   puts "angkanya bukan 10 dan 100"
+end
+
+output : angkanya bukan 10 dan 100 # karena data kiri angka = 1

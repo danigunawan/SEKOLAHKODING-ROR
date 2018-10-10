@@ -1,0 +1,23 @@
+# belajar switch case
+
+sebelumnya belajar if else untuk menentukan 1 kondisi melakukan sesuatu, bayangin jika
+kita mau menguji banyak kondisi maka dari itu akan kita gunakan switch case
+
+
+#example 1 
+1. buka irb
+
+angka = 1
+
+#if(angka == 1)
+
+case angka
+ when 1
+   puts "angkanya 1"
+ when 2
+   puts "angkanya 2"
+ else
+   puts "tidak memenuhi"
+ end
+
+output : angkanya 1

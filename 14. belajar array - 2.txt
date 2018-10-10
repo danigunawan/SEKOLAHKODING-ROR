@@ -1,0 +1,120 @@
+# belajar tipe data array part 2
+
+#metode memasukan dan mengeluarkan element pada array 
+-push
+-unshift
+-insert
+
+#example 1 :
+1. buka irb
+
+
+bahasa = ["java","html","js","css"]
+
+bahasa.unshift("c++") # otomatis akan masuk di awal
+bahasa.push("ruby") # otomatis akan masuk diakhir
+
+puts bahasa
+
+output :
+
+c++ # awal
+java
+html
+js
+css
+ruby # akhir
+
+
+## DIPOSISI TERTENTU
+#example 2 :
+1. buka irb
+
+
+bahasa = ["java","html","js","css"]
+
+bahasa.unshift("c++") # otomatis akan masuk di awal
+bahasa.push("ruby") # otomatis akan masuk diakhir
+bahasa.insert(2, "swift") # (posisi, "isinya")
+puts bahasa
+
+output :
+
+c++ # awal
+java
+swift # diposisi 2
+html
+js
+css
+ruby # akhir
+
+
+
+## MENGELUARKAN NILAI ARRAY TERAKHIR BUKAN HANYA MENGELUARKAN TAPI MENGHAPUS NILAI ARRAY
+- metode pop
+
+#example 3 :
+1. buka irb
+
+
+bahasa = ["java","html","js","css"]
+
+bahasa.pop # mengeluarkan nilai yang terakhir atau menghapus nilai css
+
+puts bahasa
+
+output :
+
+java
+html
+js
+
+
+
+
+## MENGELUARKAN NILAI ARRAY AWAL BUKAN HANYA MENGELUARKAN TAPI MENGHAPUS NILAI ARRAY
+- metode shift
+
+#example 4 :
+1. buka irb
+
+
+bahasa = ["java","html","js","css"]
+
+puts "mengeluarkan nilai #{bahasa.shift}" # mengeluarkan nilai yang awal atau menghapus nilai array awal java
+
+puts bahasa
+
+output :
+
+
+html
+js
+css
+
+
+
+## MENGELUARKAN NILAI ARRAY DENGAN METODE TAG / DROP DGN MENGAMBIL NOMOR ELEMEN/INDEX
+- metode tag/drop
+
+#example 4 :
+1. buka irb
+
+
+bahasa = ["java","html","js","css"]
+
+puts "mengeluarkan nilai #{bahasa[0]}" # mengindex pada element array 0 pertama yaitu java
+
+puts bahasa
+
+output :
+
+mengeluarkan nilai java
+java
+html
+js
+css
+
+
+
+

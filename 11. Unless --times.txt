@@ -1,0 +1,58 @@
+# UNLESS
+
+jika pernah belajar if else, else if
+
+maka unless ini adalah kebalikannya :
+
+# jadi yang kita uji harus false
+
+
+# Example 1 :
+1. buka irb
+
+angka = 10
+
+unless angka == 9
+puts "didalam unless"
+else
+puts "diluar unless"
+end
+
+output : didalam kelas
+karena jika kondisi salah angka == 9 salah 10 bukan = 9
+
+
+sebaliknya jika 9 == 9 maka,
+output : diluar unless
+
+# Example 2 :
+1. buka irb 
+isikan :
+
+3.times do # pengulangan program atau baris tertentu selama 3 kali ini tergantu do dan end dimananya akan jalan
+
+ puts "masukkan angka:"
+ angka = gets.chom.to_i
+
+ unless angka == 9
+ puts "didalam unless"
+ else
+ puts "diluar unless"
+ end
+end
+
+output :
+
+masukan angka : 10 
+didalam unless
+
+masukan angka : 9 
+diluar unless
+
+masukan angka : 1
+didalam unless
+
+
+# Pengulangan komples selain times do diatas ada :
+- for loop
+- for in
